@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculate Cube Volume and Surface Area</title>
+  </head>
+  <body>
+    <h1>Cube Volume and Surface Area Calculator</h1>
+    <label for="side">Enter the length of a side of the cube:</label>
+    <input type="number" id="side" name="side">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+      function calculate() {
+        // Get the value of the input field
+        var side = document.getElementById("side").value;
+        // Convert the input to a number
+        side = parseFloat(side);
+        // Check if the input is valid
+        if (isNaN(side) || side <= 0) {
+          alert("Please enter a valid positive number for the side length.");
+          return;
+        }
+        // Calculate the volume of the cube
+        var volume = side * side * side;
+        // Calculate the surface area of the cube
+        var surfaceArea = 6 * side * side;
+        // Display the result
+        var resultText = "The volume of the cube is " + volume + " cubic units.<br>";
+        resultText += "The surface area of the cube is " + surfaceArea + " square units.";
+        document.getElementById("result").innerHTML = resultText;
+      }
+    </script>
+  </body>
+</html>
+
