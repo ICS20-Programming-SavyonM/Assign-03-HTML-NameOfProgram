@@ -1,7 +1,7 @@
 // Copyright (c) 2023 Savyon All rights reserved
 //
 // Created by: Savyon
-// Created on: March 2023
+// Created on: Apr 2023
 // This file contains the JS functions for index.html
 
 function calculate() {
@@ -21,9 +21,7 @@ function calculate() {
   var surfaceArea = 6 * side * side;
   surfaceArea = surfaceArea.toFixed(2);
   // Display the result
-  var resultText = "The volume of the cube is " + volume + " square units.<br>";
-  resultText += "The surface area of the cube is " + surfaceArea + " square units.";
+  var resultText = "The volume of the cube is " + volume + "cm³.<br>";
+  resultText += "The surface area of the cube is " + surfaceArea + "cm².";
   document.getElementById("result").innerHTML = resultText;
 }
-
-

@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <script src="./js/script.js"></script>
+     <!--metadata--> 
+    <meta charset="utf-8">
+    <meta name="description" content="User Input, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Savyon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Elliptical Calculations</title>
+    <!--For favicon on page--> 
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
     <meta charset="UTF-8">
     <title>Calculate Cube Volume and Surface Area</title>
   </head>
   <body>
     <h1>Cube Volume and Surface Area Calculator</h1>
-    <label for="side">Enter the length of a side of the cube:</label>
-    <input type="number" id="side" name="side">
+    <!--area to enter side length-->
+    <label for="side">Enter the length of a side of the cube (cm):</label>
+    <input type="number" id="side" name="side" placeholder="Enter here">
     <button onclick="calculate()">Calculate</button>
     <p id="result"></p>
-    <script>
-      function calculate() {
-        // Get the value of the input field
-        var side = document.getElementById("side").value;
-        // Convert the input to a number
-        side = parseFloat(side);
-        // Check if the input is valid
-        if (isNaN(side) || side <= 0) {
-          alert("Please enter a valid positive number for the side length.");
-          return;
-        }
-        // Calculate the volume of the cube
-        var volume = side * side * side;
-        // Calculate the surface area of the cube
-        var surfaceArea = 6 * side * side;
-        // Display the result
-        var resultText = "The volume of the cube is " + volume + " cubic units.<br>";
-        resultText += "The surface area of the cube is " + surfaceArea + " square units.";
-        document.getElementById("result").innerHTML = resultText;
-      }
-    </script>
+    <!--checkbox-->
+   <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+  <span class="mdl-checkbox__label">Check if calculation worked!</span>
+</label>
+     <!--image on this page--> 
+  <br></br>
+   <img src= "./images/cube.jpg" width = "361" height = "223" 
   </body>
 </html>
-
